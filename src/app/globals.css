@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #070B14;
+  --text-primary: #F8FAFC;
+}
+
+body {
+  background-color: #070B14;
+  color: #F8FAFC;
+  font-family: var(--font-lexend), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cyber grid background helper */
+.cyber-bg {
+  background-color: #070B14;
+  background-image: 
+    radial-gradient(ellipse at 50% -20%, rgba(0, 240, 255, 0.15), transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.08), transparent 50%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-glow {
+  background: rgba(13, 21, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease-in-out;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 20px -3px rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Cyber glowing buttons */
+.btn-cyber-primary {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%);
+  color: #070B14;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cyber-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-cyber-secondary {
+  background: rgba(15, 23, 42, 0.8);
+  color: #00F0FF;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cyber-secondary:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: #00F0FF;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Focus outline for accessibility & cyber aesthetics */
+:focus-visible {
+  outline: 2px solid #00F0FF !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5) !important;
+}
